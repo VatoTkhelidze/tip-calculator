@@ -1,0 +1,245 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #C5E4E7;
+    align-items: center;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    height: 53.13600158691406px;
+    width: 86.66400146484375px;
+
+}
+
+.white-box{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+    min-height: 100vh;
+    background: #FFFFFF;
+    box-shadow: 0px 32px 43px rgba(79, 166, 175, 0.200735);
+    border-radius: 25px 25px 0px 0px;
+    padding-left: 32px;
+    padding-right: 32px;
+    margin-top: 40px;
+    padding-bottom: 40px;
+}
+
+.bill-text{
+    font-family: 'Space Mono';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    color: #5E7A7D;
+    margin-top: 32px;
+}
+.money-amount,
+.people-amount{
+    width: 100%;
+    margin-top: 6px;
+}
+
+.money-amount input[type=text]{
+    width: 100%;
+    height: 48px;
+    background: #F3F9FA;
+    border-radius: 5px;
+    border: 0;
+    text-align: right;
+    font-family: 'Space Mono';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    text-align: right;
+    color: #00474B;
+}
+
+
+.dollar-icon{
+    position: relative;
+    transform: translate(0, -34px);
+    margin-left: 19px;
+}
+
+.select-tip{
+    margin-top: 32px;
+}
+
+.select-tip span{
+    font-family: 'Space Mono';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    color: #5E7A7D;
+}
+
+.percent-box{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.percent-box-left,
+.percent-box-right{
+    display: flex;
+    flex-direction: column;
+}
+
+.percent-box-left{
+    padding-right: 16px;
+}
+
+.box-5, 
+.box-15,
+.box-50,
+.box-10,
+.box-25{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #00474B;
+    height: 48px;
+    width: 146.6311798095703px;
+    border-radius: 5px;
+    margin-top: 16px;
+}
+
+.custom-amount{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    background: #F3F9FA;
+    border-radius: 5px;
+    height: 48px;
+    width: 146.6311798095703px;
+    margin-top: 16px;
+}
+
+.custom-amount span{
+    font-family: 'Space Mono';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    text-align: right;
+    color: #547878;
+    padding-right: 17px;
+}
+
+
+.box-5 span,
+.box-15 span,
+.box-50 span,
+.box-10 span,
+.box-25 span{
+    font-family: 'Space Mono';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.number-of-people{
+    display: flex;
+    width: 100%;
+    margin-top: 32px;
+}
+
+.number-of-people span{
+    font-family: 'Space Mono';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    color: #5E7A7D;
+}
+
+
+.people-amount input[type=text]{
+    width: 100%;
+    height: 48px;
+    background: #F3F9FA;
+    border-radius: 5px;
+    border: 0;
+    text-align: right;
+    font-family: 'Space Mono';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    text-align: right;
+    color: #00474B;
+}
+
+.people-icon{
+    position: relative;
+    transform: translate(0, -34px);
+    margin-left: 19px;
+}
+
+
+.green-box{
+    display: flex;
+    background: #00474B;
+    border-radius: 15px;
+    width: 100%;
+    height: 257px;
+    padding-left: 24px;
+    padding-right: 22px;
+    padding-bottom: 24px;
+}
+
+.tip-amount-person{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.tip-amount,
+.total{
+    font-family: 'Space Mono';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    color: #FFFFFF;
+    margin-top: 39px;
+}
+
+.person{
+    font-family: 'Space Mono';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 19px;
+    color: #7F9D9F;
+}
+
+.total-amount{
+    display: flex;
+    flex-direction: column;
+    height: 44px;
+    width: 64px;
+}
