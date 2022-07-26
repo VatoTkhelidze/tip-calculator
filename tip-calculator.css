@@ -57,7 +57,7 @@ header{
     margin-top: 6px;
 }
 
-.money-amount input[type=text]{
+.money-amount input[type=number]{
     width: 100%;
     height: 48px;
     background: #F3F9FA;
@@ -71,6 +71,30 @@ header{
     text-align: right;
     color: #00474B;
     padding-right: 16px;
+}
+
+.tip-amount-output output[type=number]{
+    height: 48px;
+    font-family: 'Space Mono';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 47px;
+    text-align: right;
+    color: #26C2AE;
+    letter-spacing: -0.666667px;
+    margin-top: 37px;
+}
+
+.tip-amount_total{
+    width: 100%;
+}
+
+.tip-amount-output{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
 }
 
 
@@ -109,11 +133,7 @@ header{
     padding-right: 16px;
 }
 
-.box-5, 
-.box-15,
-.box-50,
-.box-10,
-.box-25{
+.percentButton{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -148,11 +168,7 @@ header{
 }
 
 
-.box-5 span,
-.box-15 span,
-.box-50 span,
-.box-10 span,
-.box-25 span{
+.percentColor{
     font-family: 'Space Mono';
     font-style: normal;
     font-weight: 700;
@@ -178,7 +194,7 @@ header{
 }
 
 
-.people-amount input[type=text]{
+.people-amount input[type=number]{
     width: 100%;
     height: 48px;
     background: #F3F9FA;
@@ -203,6 +219,7 @@ header{
 
 .green-box{
     display: flex;
+    flex-direction: column;
     background: #00474B;
     border-radius: 15px;
     width: 100%;
@@ -218,8 +235,7 @@ header{
     flex-direction: column;
 }
 
-.tip-amount,
-.total{
+.tip-amount{
     font-family: 'Space Mono';
     font-style: normal;
     font-weight: 700;
@@ -227,6 +243,15 @@ header{
     line-height: 24px;
     color: #FFFFFF;
     margin-top: 39px;
+}
+
+.total{
+    font-family: 'Space Mono';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    color: #FFFFFF;
 }
 
 .person{
@@ -244,3 +269,48 @@ header{
     height: 44px;
     width: 64px;
 }
+
+.total-amount-output output[type=number]{
+    border-radius: 5px;
+    border: 0;
+    font-family: 'Space Mono';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 47px;
+    text-align: right;
+    color: #26C2AE;
+}
+
+.total-amount-output{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 25px;
+}
+
+.reset-box{
+    width: 100%;
+    height: 48px;
+    color: #00474B;
+    background-color: #26C2AE;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    margin-top: 35px;
+    cursor: pointer;
+    border: 0;
+    font-family: 'Space Mono';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+.reset-box:hover {
+    background-color: #9FE8DF;
+}
+
+

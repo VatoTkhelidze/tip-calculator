@@ -2,6 +2,7 @@
     <head>
         <link rel="stylesheet" href="tip-calculator.css"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8">
     </head>
     <body>
         <header>
@@ -15,7 +16,7 @@
             </div>
 
             <div class="money-amount">
-                <input type="text">
+                <input type="number">
                 <img class="dollar-icon" src="../task12(assets)/images/icon-dollar.svg" alt="Sorry, no image available"/>
             </div>
 
@@ -25,23 +26,23 @@
 
             <div class="percent-box">
                 <div class="percent-box-left">
-                    <div onclick="setTimeout(makeItLighter, 250)" class="box-5">
-                        <span>5%</span>
+                    <div class="box-5 percentButton">
+                        <span class="percentColor">5%</span>
                     </div>
-                    <div class="box-15">
-                        <span>15%</span>
+                    <div class="box-15 percentButton">
+                        <span class="percentColor">15%</span>
                     </div>
-                    <div class="box-50">
-                        <span>50%</span>
+                    <div class="box-50 percentButton">
+                        <span class="percentColor">50%</span>
                     </div>
                 </div>
 
                 <div class="percent-box-right">
-                    <div class="box-10">
-                        <span>10%</span>
+                    <div class="box-10 percentButton">
+                        <span class="percentColor">10%</span>
                     </div>
-                    <div class="box-25">
-                        <span>25%</span>
+                    <div class="box-25 percentButton">
+                        <span class="percentColor">25%</span>
                     </div>
                     <div class="custom-amount">
                         <span>Custom</span>
@@ -53,21 +54,28 @@
                 <span>Number of People</span>
             </div>
             <div class="people-amount">
-                <input type="text">
+                <input type="number">
                 <img class="people-icon" src="../task12(assets)/images/icon-person.svg" alt="Sorry, no image available"/>
             </div>
 
             <div class="green-box">
                 <div class="tip-amount_total">
-                    <div class="tip-amount-person">
-                        <span class="tip-amount">Tip Amount</span>
-                        <span class="person">/ person</span>
+                    <div class="tip-amount-output">
+                        <div class="tip-amount-person">
+                            <span class="tip-amount">Tip Amount</span>
+                            <span class="person">/ person</span>
+                        </div>
+                        <output type="number">$5.20</output>
                     </div>
-                    <div class="total-amount">
-                        <span class="total">Total</span>
-                        <span class="person">/ person</span>
+                    <div class="total-amount-output">
+                        <div class="total-amount">
+                            <span class="total">Total</span>
+                            <span class="person">/ person</span>
+                        </div>
+                        <output type="number">$3.20</output>
                     </div>
                 </div>
+                <button class="reset-box">RESET</button>
             </div>
         </div>
         <script src="tip-calculator.js"></script>
