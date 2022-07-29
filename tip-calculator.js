@@ -79,6 +79,11 @@ for(let i=0; i<numberClick.length; i++){
 
 
 //next step is to reset "percent box colors" when RESET button pressed.
+//next step is to reset "percent box colors" when RESET button pressed.
+//next step is to reset "percent box colors" when RESET button pressed.
+//next step is to reset "percent box colors" when RESET button pressed.
+//next step is to reset "percent box colors" when RESET button pressed.
+//next step is to reset "percent box colors" when RESET button pressed.
 
 
 
