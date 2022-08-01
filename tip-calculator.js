@@ -4,6 +4,80 @@ percentClick = document.querySelectorAll(".percentButton")
 
 numberClick = document.querySelectorAll(".percentColor")
 
+percent5 = document.querySelector('.box-5')
+percent5.addEventListener('click', function result(){
+    a = 5;
+    b = 100;
+    c = billInput.value;
+    if(!peopleNumberInput.value && !billInput.value){
+        console.log('Please enter the bill amount and number of people.')
+    }
+    if(peopleNumberInput.value && !billInput.value){
+        console.log('Please enter the bill amount and number of people.')
+    }
+    if(!peopleNumberInput.value && billInput.value){
+        console.log('Please enter the bill amount and number of people.')
+    }
+    if(peopleNumberInput.value && billInput.value < 0){
+        console.log('Please enter correct Number of People.')
+    }
+    if(peopleNumberInput.value && billInput.value > 0){
+        console.log(c * a / b)
+    }
+    
+})
+
+percent10 = document.querySelector('.box-10')
+percent10.addEventListener('click', function result(){
+    a = 10;
+    b = 100;
+    c = billInput.value;
+    console.log(c * a / b);
+})
+
+percent15 = document.querySelector('.box-15')
+percent15.addEventListener('click', function result(){
+    a = 15;
+    b = 100;
+    c = billInput.value;
+    console.log(c * a / b);
+})
+
+percent25 = document.querySelector('.box-25')
+percent25.addEventListener('click', function result(){
+    a = 25;
+    b = 100;
+    c = billInput.value;
+    console.log(c * a / b);
+})
+
+percent50 = document.querySelector('.box-50')
+percent50.addEventListener('click', function result(){
+    a = 50;
+    b = 100;
+    c = billInput.value;
+    console.log(c * a / b);
+})
+
+// percentCustom = document.querySelector('.custom-amount')
+customButtonInput = document.querySelector(".custom-amount input")
+customButtonInput.addEventListener('input', function result(){
+    a = customButtonInput.value;
+    b = 100;
+    c = billInput.value;
+    console.log(c * a / b);
+})
+// customButtonInput.addEventListener('click', function(){
+//     a = customButtonInput.value;
+//     b = 100;
+//     c = billInput.value;
+//     console.log(c * a / b);
+// })
+
+
+
+
+
 
 
 
@@ -11,6 +85,7 @@ billInput = document.querySelector(".money-amount input")
 billInput.addEventListener('input', function(){
     console.log(billInput.value);
 })
+
 
 
 
@@ -22,10 +97,7 @@ peopleNumberInput.addEventListener('input', function(){
 
 
 
-customButtonInput = document.querySelector(".custom-amount input")
-customButtonInput.addEventListener('input', function(){
-    console.log(customButtonInput.value);
-})
+
 
 
 
@@ -34,10 +106,6 @@ customButtonInput.addEventListener('input', function(){
 
 
 tipAmountOutput = document.querySelector(".tip-amount-person")
-
-tipAmountOutput.addEventListener('output', function(){
-    console.log(tipAmountOutput.value);
-})
 
 
 
