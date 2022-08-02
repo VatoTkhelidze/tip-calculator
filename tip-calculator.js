@@ -12,6 +12,8 @@ let c = 0;
 
 let d = 0;
 
+let Number;
+
 
 for(let i=0; i<percentClick.length; i++){
     percentClick[i].addEventListener('click', function(){
@@ -226,6 +228,7 @@ customButtonInput.addEventListener('input', function result(){
     d = peopleNumberInput.value;
     calculation = c * a / b / d
     tipAmountOutput.value = '$' + calculation.toFixed(2)
+    
 
 
 
@@ -250,6 +253,12 @@ customButtonInput.addEventListener('input', function result(){
     if(peopleNumberInput.value && billInput.value > 0){
         console.log('Tip payment for person is ' + c * a / b / d + '$')
     }
+    if(customButtonInput.value > 0){
+        resetButton.style.backgroundColor = '#26C2AE';
+    }
+    if(customButtonInput?.value === ''){
+        resetButton.style.backgroundColor = '#0D686D'
+    }
 })
 
 customButtonInput.addEventListener('click', function(){
@@ -266,6 +275,13 @@ customButtonInput.addEventListener('click', function(){
     calculation = c * a / b / d
     tipAmountOutput.value = '$' + calculation.toFixed(2)
     tipAmountOutput.value = '$';
+
+    if(customButtonInput.value > 0){
+        resetButton.style.backgroundColor = '#26C2AE';
+    }
+    if(customButtonInput?.value === ''){
+        resetButton.style.backgroundColor = '#0D686D'
+    }
 })
 
 
@@ -284,6 +300,7 @@ resetButton.addEventListener('click', function(){
     for(let j=0; j<numberClick.length; j++){
         numberClick[j].style.color = '#FFFFFF';
     }
+    
     
 })
 
@@ -316,6 +333,12 @@ billInput.addEventListener('input', function(){
     if(billInput.value && !peopleNumberInput.value){
         tipAmountOutput.value = '$'
     }
+    if(billInput.value > 0){
+        resetButton.style.backgroundColor = '#26C2AE';
+    }
+    if(billInput?.value === ''){
+        resetButton.style.backgroundColor = '#0D686D'
+    }
 })
 
 
@@ -336,6 +359,12 @@ peopleNumberInput.addEventListener('input', function(){
     }
     if(billInput.value && !peopleNumberInput.value){
         tipAmountOutput.value = '$'
+    }
+    if(peopleNumberInput.value > 0){
+        resetButton.style.backgroundColor = '#26C2AE';
+    }
+    if(peopleNumberInput?.value === ''){
+        resetButton.style.backgroundColor = '#0D686D'
     }
 })
 
