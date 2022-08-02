@@ -1,1 +1,1 @@
-# Tip-Calculator
+# VatoTkhelidze.Tip-Calculator
