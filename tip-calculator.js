@@ -250,7 +250,13 @@ resetButton.addEventListener('click', function(){
         customButtonInput.value = '';
         tipAmountOutput.value = '$';
     }
-    percentClick.style.background = '#00474B'; // DOES NOT WORK !!!!!!!!!!!!!!!!!!!!!!!!
+    for(let j=0; j<percentClick.length; j++){
+        percentClick[j].style.background = '#00474B'
+    }
+    for(let j=0; j<numberClick.length; j++){
+        numberClick[j].style.color = '#FFFFFF';
+    }
+    
 })
 
 //PERCENT BUTTONS
