@@ -12,7 +12,9 @@ let c = 0;
 
 let d = 0;
 
-let Number;
+let calculation;
+let calculationTotal;
+
 
 
 for(let i=0; i<percentClick.length; i++){
@@ -54,25 +56,32 @@ percent5.addEventListener('click', function result(){
     c = billInput.value;
     d = peopleNumberInput.value;
     calculation = c * a / b / d
+    calculationTotal = calculation + c / d;
     tipAmountOutput.value = '$' + calculation.toFixed(2)
+    totalAmountOutput.value = '$' + calculationTotal.toFixed(2)
+    console.log(calculationTotal);
     customButtonInput.value = ''
 
     if(!peopleNumberInput.value && !billInput.value){
         console.log('Please enter the bill amount and number of people.')
         tipAmountOutput.value = '$'
+        totalAmountOutput.value = '$'
     }
     if(peopleNumberInput.value && !billInput.value){
         console.log('Please enter the bill amount and number of people.')
         tipAmountOutput.value = '$'
+        totalAmountOutput.value ='$'
 
     }
     if(!peopleNumberInput.value && billInput.value){
         console.log('Please enter the bill amount and number of people.')
         tipAmountOutput.value = '$'
+        totalAmountOutput.value = '$'
     }
     if(peopleNumberInput.value && billInput.value < 0){
         console.log('Please enter correct Number of People.')
         tipAmountOutput.value = '$'
+        totalAmountOutput.value = '$'
 
     }
     if(peopleNumberInput.value && billInput.value > 0){
@@ -88,7 +97,10 @@ percent10.addEventListener('click', function result(){
     c = billInput.value;
     d = peopleNumberInput.value;
     calculation = c * a / b / d
+    calculationTotal = calculation + c / d
     tipAmountOutput.value = '$' + calculation.toFixed(2)
+    console.log(calculationTotal);
+    totalAmountOutput.value = '$' + calculationTotal.toFixed(2)
     customButtonInput.value = ''
 
 
@@ -104,10 +116,12 @@ percent10.addEventListener('click', function result(){
     if(!peopleNumberInput.value && billInput.value){
         console.log('Please enter the bill amount and number of people.')
         tipAmountOutput.value = '$'
+        totalAmountOutput.value = '$'
     }
     if(peopleNumberInput.value && billInput.value < 0){
         console.log('Please enter correct Number of People.')
         tipAmountOutput.value = '$'
+        totalAmountOutput.value = '$'
 
     }
     if(peopleNumberInput.value && billInput.value > 0){
@@ -122,26 +136,33 @@ percent15.addEventListener('click', function result(){
     c = billInput.value;
     d = peopleNumberInput.value;
     calculation = c * a / b / d
+    calculationTotal = calculation + c / d
     tipAmountOutput.value = '$' + calculation.toFixed(2)
+    console.log(calculationTotal);
+    totalAmountOutput.value = '$' + calculationTotal.toFixed(2)
     customButtonInput.value = ''
 
     
     if(!peopleNumberInput.value && !billInput.value){
         console.log('Please enter the bill amount and number of people.')
         tipAmountOutput.value = '$'
+        totalAmountOutput.value = '$'
     }
     if(peopleNumberInput.value && !billInput.value){
         console.log('Please enter the bill amount and number of people.')
         tipAmountOutput.value = '$'
+        totalAmountOutput.value = '$'
 
     }
     if(!peopleNumberInput.value && billInput.value){
         console.log('Please enter the bill amount and number of people.')
         tipAmountOutput.value = '$'
+        totalAmountOutput.value = '$'
     }
     if(peopleNumberInput.value && billInput.value < 0){
         console.log('Please enter correct Number of People.')
         tipAmountOutput.value = '$'
+        totalAmountOutput.value = '$'
 
     }
     if(peopleNumberInput.value && billInput.value > 0){
@@ -156,7 +177,10 @@ percent25.addEventListener('click', function result(){
     c = billInput.value;
     d = peopleNumberInput.value;
     calculation = c * a / b / d
+    calculationTotal = calculation + c / d
     tipAmountOutput.value = '$' + calculation.toFixed(2)
+    console.log(calculationTotal);
+    totalAmountOutput.value = '$' + calculationTotal.toFixed(2)
     customButtonInput.value = ''
 
 
@@ -164,19 +188,23 @@ percent25.addEventListener('click', function result(){
     if(!peopleNumberInput.value && !billInput.value){
         console.log('Please enter the bill amount and number of people.')
         tipAmountOutput.value = '$'
+        totalAmountOutput.value = '$'
     }
     if(peopleNumberInput.value && !billInput.value){
         console.log('Please enter the bill amount and number of people.')
         tipAmountOutput.value = '$'
+        totalAmountOutput.value = '$'
 
     }
     if(!peopleNumberInput.value && billInput.value){
         console.log('Please enter the bill amount and number of people.')
         tipAmountOutput.value = '$'
+        totalAmountOutput.value = '$'
     }
     if(peopleNumberInput.value && billInput.value < 0){
         console.log('Please enter correct Number of People.')
         tipAmountOutput.value = '$'
+        totalAmountOutput.value = '$'
 
     }
     if(peopleNumberInput.value && billInput.value > 0){
@@ -191,7 +219,10 @@ percent50.addEventListener('click', function result(){
     c = billInput.value;
     d = peopleNumberInput.value;
     calculation = c * a / b / d
+    calculationTotal = calculation + c / d
     tipAmountOutput.value = '$' + calculation.toFixed(2)
+    console.log(calculationTotal);
+    totalAmountOutput.value = '$' + calculationTotal.toFixed(2)
     customButtonInput.value = ''
 
 
@@ -199,19 +230,23 @@ percent50.addEventListener('click', function result(){
     if(!peopleNumberInput.value && !billInput.value){
         console.log('Please enter the bill amount and number of people.')
         tipAmountOutput.value = '$'
+        totalAmountOutput.value = '$'
     }
     if(peopleNumberInput.value && !billInput.value){
         console.log('Please enter the bill amount and number of people.')
         tipAmountOutput.value = '$'
+        totalAmountOutput.value = '$'
 
     }
     if(!peopleNumberInput.value && billInput.value){
         console.log('Please enter the bill amount and number of people.')
         tipAmountOutput.value = '$'
+        totalAmountOutput.value = '$'
     }
     if(peopleNumberInput.value && billInput.value < 0){
         console.log('Please enter correct Number of People.')
         tipAmountOutput.value = '$'
+        totalAmountOutput.value = '$'
 
     }
     if(peopleNumberInput.value && billInput.value > 0){
@@ -227,7 +262,10 @@ customButtonInput.addEventListener('input', function result(){
     c = billInput.value;
     d = peopleNumberInput.value;
     calculation = c * a / b / d
+    calculationTotal = calculation + c / d
     tipAmountOutput.value = '$' + calculation.toFixed(2)
+    console.log(calculationTotal);
+    totalAmountOutput.value = '$' + calculationTotal.toFixed(2)
     
 
 
@@ -235,19 +273,23 @@ customButtonInput.addEventListener('input', function result(){
     if(!peopleNumberInput.value && !billInput.value){
         console.log('Please enter the bill amount and number of people.')
         tipAmountOutput.value = '$'
+        totalAmountOutput.value = '$'
     }
     if(peopleNumberInput.value && !billInput.value){
         console.log('Please enter the bill amount and number of people.')
         tipAmountOutput.value = '$'
+        totalAmountOutput.value = '$'
 
     }
     if(!peopleNumberInput.value && billInput.value){
         console.log('Please enter the bill amount and number of people.')
         tipAmountOutput.value = '$'
+        totalAmountOutput.value = '$'
     }
     if(peopleNumberInput.value && billInput.value < 0){
         console.log('Please enter correct Number of People.')
         tipAmountOutput.value = '$'
+        totalAmountOutput.value = '$'
 
     }
     if(peopleNumberInput.value && billInput.value > 0){
@@ -275,6 +317,7 @@ customButtonInput.addEventListener('click', function(){
     calculation = c * a / b / d
     tipAmountOutput.value = '$' + calculation.toFixed(2)
     tipAmountOutput.value = '$';
+    totalAmountOutput.value = '$';
 
     if(customButtonInput.value > 0){
         resetButton.style.backgroundColor = '#26C2AE';
@@ -288,11 +331,12 @@ customButtonInput.addEventListener('click', function(){
 
 let resetButton = document.querySelector(".reset-box")
 resetButton.addEventListener('click', function(){
-    if(billInput.value || peopleNumberInput.value || customButtonInput.value || tipAmountOutput.value > 0){
+    if(billInput.value > 0 || peopleNumberInput.value > 0 || customButtonInput.value > 0 || tipAmountOutput.value > 0 || totalAmountOutput.value > 0){
         billInput.value = '';
         peopleNumberInput.value = '';
         customButtonInput.value = '';
         tipAmountOutput.value = '$';
+        totalAmountOutput.value = '$';
     }
     for(let j=0; j<percentClick.length; j++){
         percentClick[j].style.background = '#00474B'
@@ -326,12 +370,15 @@ billInput.addEventListener('input', function(){
         d = peopleNumberInput.value;
         calculation = c * a / b / d
         tipAmountOutput.value = '$' + calculation.toFixed(2)
+        totalAmountOutput.value = '$' + calculationTotal.toFixed(2)
     }
     if(!billInput.value && peopleNumberInput.value){
         tipAmountOutput.value = '$'
+        totalAmountOutput.value = '$'
     }
     if(billInput.value && !peopleNumberInput.value){
         tipAmountOutput.value = '$'
+        totalAmountOutput.value = '$'
     }
     if(billInput.value > 0){
         resetButton.style.backgroundColor = '#26C2AE';
@@ -353,12 +400,15 @@ peopleNumberInput.addEventListener('input', function(){
         d = peopleNumberInput.value;
         calculation = c * a / b / d
         tipAmountOutput.value = '$' + calculation.toFixed(2)
+        totalAmountOutput.value = '$' + calculationTotal.toFixed(2)
     }
     if(!billInput.value && peopleNumberInput.value){
         tipAmountOutput.value = '$'
+        totalAmountOutput.value = '$'
     }
     if(billInput.value && !peopleNumberInput.value){
         tipAmountOutput.value = '$'
+        totalAmountOutput.value = '$'
     }
     if(peopleNumberInput.value > 0){
         resetButton.style.backgroundColor = '#26C2AE';
@@ -372,11 +422,7 @@ peopleNumberInput.addEventListener('input', function(){
 
 
 let tipAmountOutput = document.querySelector(".tip-amount-output output")
-// tipAmountOutput.addEventListener('output', function result(){
-//     if(customButtonInput.value = ''){
-//         tipAmountOutput.value = 1;
-//     }
-// })
+let totalAmountOutput = document.querySelector(".total-amount-output output")
 
 
                                         //inputs & outputs
