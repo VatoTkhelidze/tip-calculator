@@ -13,7 +13,11 @@ let c = 0;
 let d = 0;
 
 let calculation;
+
 let calculationTotal;
+
+
+
 
 
 
@@ -335,6 +339,10 @@ customButtonInput.addEventListener('click', function(){
     if(customButtonInput?.value === ''){
         resetButton.style.backgroundColor = '#0D686D'
     }
+    if(customButtonInput.value < 0){
+        tipAmountOutput.value = '$0.00';
+        totalAmountOutput.value = '$0.00';
+    }
 })
 
 
@@ -379,13 +387,14 @@ billInput.addEventListener('input', function(){
         d = peopleNumberInput.value;
         calculation = c * a / b / d
         calculationTotal = calculation + c / d
+        let billInputValue = billInput.value;
+        let peopleNumberInputValue = peopleNumberInput.value;
         tipAmountOutput.value = '$' + calculation.toFixed(2)
         totalAmountOutput.value = '$' + calculationTotal.toFixed(2)
     }
-
-    // if(peopleNumberInput.value > 0){
-    //     totalAmountOutput.value = '$'
-    // }
+    if(billInput.value > 0 && peopleNumberInput.value > 0){
+        totalAmountOutput.value = '$0.00'
+    }
     if(!billInput.value && peopleNumberInput.value){
         tipAmountOutput.value = '$0.00'
         totalAmountOutput.value = '$0.00'
@@ -407,7 +416,11 @@ billInput.addEventListener('input', function(){
 
 let peopleNumberInput = document.querySelector(".people-amount input")
 peopleNumberInput.addEventListener('input', function(){
-    console.log(peopleNumberInput.value);
+    let billInputValue = billInput.value;
+    let peopleNumberInputValue = peopleNumberInput.value;
+    // if(billInput.value > 0 && peopleNumberInput.value > 0){
+    //     totalAmountOutput.value = '$' + (billInputValue / peopleNumberInputValue)
+    // }
     if(billInput.value > 0 && peopleNumberInput.value > 0 && a > 0){
         b = 100;
         c = billInput.value;
