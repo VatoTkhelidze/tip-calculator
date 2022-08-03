@@ -86,6 +86,7 @@ percent5.addEventListener('click', function result(){
     }
     if(peopleNumberInput.value && billInput.value > 0){
         console.log('Tip payment for person is ' + c * a / b / d + '$')
+        totalAmountOutput.value = '$' + calculationTotal.toFixed(2)
     }
     
 })
@@ -99,9 +100,13 @@ percent10.addEventListener('click', function result(){
     calculation = c * a / b / d
     calculationTotal = calculation + c / d
     tipAmountOutput.value = '$' + calculation.toFixed(2)
-    console.log(calculationTotal);
     totalAmountOutput.value = '$' + calculationTotal.toFixed(2)
     customButtonInput.value = ''
+    console.log(calculation);
+
+    if(!peopleNumberInput.value && billInput.value > 0){
+        totalAmountOutput.value = '$0.00'
+    }
 
 
     if(!peopleNumberInput.value && !billInput.value){
@@ -111,9 +116,10 @@ percent10.addEventListener('click', function result(){
     if(peopleNumberInput.value && !billInput.value){
         console.log('Please enter the bill amount and number of people.')
         tipAmountOutput.value = '$'
+        totalAmountOutput.value = '$'
 
     }
-    if(!peopleNumberInput.value && billInput.value){
+    if(!peopleNumberInput.value && billInput.value > 0){
         console.log('Please enter the bill amount and number of people.')
         tipAmountOutput.value = '$'
         totalAmountOutput.value = '$'
@@ -266,6 +272,10 @@ customButtonInput.addEventListener('input', function result(){
     tipAmountOutput.value = '$' + calculation.toFixed(2)
     console.log(calculationTotal);
     totalAmountOutput.value = '$' + calculationTotal.toFixed(2)
+    if(customButtonInput.value > 100){
+        tipAmountOutput.value = '$0.00'
+        totalAmountOutput.value = '$0.00'
+    }
     
 
 
@@ -363,15 +373,19 @@ resetButton.addEventListener('click', function(){
 
 let billInput = document.querySelector(".money-amount input")
 billInput.addEventListener('input', function(){
-    console.log(billInput.value);
     if(billInput.value > 0 && peopleNumberInput.value > 0 && a > 0){
         b = 100;
         c = billInput.value;
         d = peopleNumberInput.value;
         calculation = c * a / b / d
+        calculationTotal = calculation + c / d
         tipAmountOutput.value = '$' + calculation.toFixed(2)
         totalAmountOutput.value = '$' + calculationTotal.toFixed(2)
     }
+
+    // if(peopleNumberInput.value > 0){
+    //     totalAmountOutput.value = '$'
+    // }
     if(!billInput.value && peopleNumberInput.value){
         tipAmountOutput.value = '$'
         totalAmountOutput.value = '$'
@@ -399,6 +413,7 @@ peopleNumberInput.addEventListener('input', function(){
         c = billInput.value;
         d = peopleNumberInput.value;
         calculation = c * a / b / d
+        calculationTotal = calculation + c / d
         tipAmountOutput.value = '$' + calculation.toFixed(2)
         totalAmountOutput.value = '$' + calculationTotal.toFixed(2)
     }
