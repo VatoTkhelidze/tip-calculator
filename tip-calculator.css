@@ -181,18 +181,30 @@ header{
     font-style: normal;
     font-weight: 700;
     font-size: 24px;
-    line-height: 36px;
+    line-height: 16px;
     text-align: center;
     color: #FFFFFF;
 }
 
-.number-of-people{
-    display: flex;
-    width: 100%;
-    margin-top: 32px;
+.zero{
+    display: none;
+    font-family: 'Space Mono';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    color: #E17457;
 }
 
-.number-of-people span{
+.number-of-people{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-top: 32px;
+    justify-content: space-between;
+}
+
+.numberofpeople{
     font-family: 'Space Mono';
     font-style: normal;
     font-weight: 700;

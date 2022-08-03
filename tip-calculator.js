@@ -4,6 +4,12 @@ let percentClick = document.querySelectorAll(".percentButton")
 
 let numberClick = document.querySelectorAll(".percentColor")
 
+let customButton = document.querySelector('.custom-amount')
+
+let cantBeZero = document.querySelector('.zero')
+
+let whiteBox = document.querySelector('.white-box')
+
 let a = 0;
 
 let b = 0;
@@ -17,6 +23,20 @@ let calculation;
 let calculationTotal;
 
 
+
+
+
+whiteBox.addEventListener('click', function(){
+    if(peopleNumberInput.value == ''){
+        peopleNumberInput.style.border = 'none'
+        cantBeZero.style.display = 'none'
+    }
+    if(customButtonInput.value == ''){
+        customButton.style.border = 'none'
+    }
+    console.log(whiteBox)
+    console.log(peopleNumberInput.value)
+})
 
 
 
@@ -276,14 +296,17 @@ customButtonInput.addEventListener('input', function result(){
     tipAmountOutput.value = '$' + calculation.toFixed(2)
     console.log(calculationTotal);
     totalAmountOutput.value = '$' + calculationTotal.toFixed(2)
+
+
+
+
+    if(customButtonInput.value === '0'){
+        customButton.style.border = '2px solid #E17052'
+    }
     if(customButtonInput.value > 100){
         tipAmountOutput.value = '$0.00'
         totalAmountOutput.value = '$0.00'
     }
-    
-
-
-
     if(!peopleNumberInput.value && !billInput.value){
         console.log('Please enter the bill amount and number of people.')
         tipAmountOutput.value = '$0.00'
@@ -311,9 +334,13 @@ customButtonInput.addEventListener('input', function result(){
     }
     if(customButtonInput.value > 0){
         resetButton.style.backgroundColor = '#26C2AE';
+        customButton.style.border = 'none'
     }
     if(customButtonInput?.value === ''){
         resetButton.style.backgroundColor = '#0D686D'
+    }
+    if(customButtonInput.value ==''){
+        customButton.style.border = 'none'
     }
 })
 
@@ -335,6 +362,7 @@ customButtonInput.addEventListener('click', function(){
 
     if(customButtonInput.value > 0){
         resetButton.style.backgroundColor = '#26C2AE';
+        customButton.style.border = 'none'
     }
     if(customButtonInput?.value === ''){
         resetButton.style.backgroundColor = '#0D686D'
@@ -343,12 +371,23 @@ customButtonInput.addEventListener('click', function(){
         tipAmountOutput.value = '$0.00';
         totalAmountOutput.value = '$0.00';
     }
+    if(customButtonInput.value === '0'){
+        customButton.style.border = '2px solid #E17052'
+        console.log(customButtonInput.value)
+    }
+    if(customButtonInput.value ==''){
+        customButton.style.border = 'none'
+    }
 })
 
 
 
 let resetButton = document.querySelector(".reset-box")
 resetButton.addEventListener('click', function(){
+    peopleNumberInput.style.border = 'none';
+    cantBeZero.style.display = 'none';
+    customButton.style.border = 'none'
+
     if(billInput.value > 0 || peopleNumberInput.value > 0 || customButtonInput.value > 0 || tipAmountOutput.value > 0 || totalAmountOutput.value > 0){
         billInput.value = '';
         peopleNumberInput.value = '';
@@ -387,8 +426,6 @@ billInput.addEventListener('input', function(){
         d = peopleNumberInput.value;
         calculation = c * a / b / d
         calculationTotal = calculation + c / d
-        let billInputValue = billInput.value;
-        let peopleNumberInputValue = peopleNumberInput.value;
         tipAmountOutput.value = '$' + calculation.toFixed(2)
         totalAmountOutput.value = '$' + calculationTotal.toFixed(2)
     }
@@ -416,11 +453,6 @@ billInput.addEventListener('input', function(){
 
 let peopleNumberInput = document.querySelector(".people-amount input")
 peopleNumberInput.addEventListener('input', function(){
-    let billInputValue = billInput.value;
-    let peopleNumberInputValue = peopleNumberInput.value;
-    // if(billInput.value > 0 && peopleNumberInput.value > 0){
-    //     totalAmountOutput.value = '$' + (billInputValue / peopleNumberInputValue)
-    // }
     if(billInput.value > 0 && peopleNumberInput.value > 0 && a > 0){
         b = 100;
         c = billInput.value;
@@ -440,10 +472,24 @@ peopleNumberInput.addEventListener('input', function(){
     }
     if(peopleNumberInput.value > 0){
         resetButton.style.backgroundColor = '#26C2AE';
+        peopleNumberInput.style.border = 'none';
+        cantBeZero.style.display = 'none';
     }
     if(peopleNumberInput?.value === ''){
         resetButton.style.backgroundColor = '#0D686D'
     }
+    if(peopleNumberInput.value === '0'){
+        peopleNumberInput.style.border = '2px solid #E17052';
+        cantBeZero.style.display = 'block';
+    }
+    if(peopleNumberInput.value === ''){
+        peopleNumberInput.style.border = 'none'
+        cantBeZero.style.display = 'none'
+    }
+    // if(customButtonInput.value = '0'){
+    //     customButton.style.border = '2px solid #E17052'
+    //     console.log(customButtonInput.value)
+    // }
 })
 
 
