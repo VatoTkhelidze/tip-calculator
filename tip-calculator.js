@@ -11,6 +11,9 @@ let c = 0;
 let d = 0;
 let calculation;
 let calculationTotal;
+resetColorChange = () => {
+    resetButton.style.backgroundColor = '#26C2AE';
+}
 for(let i=0; i<percentClick.length; i++){
     percentClick[i].addEventListener('click', function(){
         for(let j=0; j<percentClick.length; j++){
@@ -264,13 +267,20 @@ let resetButton = document.querySelector(".reset-box")
 resetButton.addEventListener('click', function(){
     peopleNumberInput.style.border = 'none';
     cantBeZero.style.display = 'none';
-    customButton.style.border = 'none'
+    customButton.style.border = 'none';
+    resetColorChange();
     if(billInput.value > 0 || peopleNumberInput.value > 0 || customButtonInput.value > 0 || tipAmountOutput.value > 0 || totalAmountOutput.value > 0){
         billInput.value = '';
         peopleNumberInput.value = '';
         customButtonInput.value = '';
         tipAmountOutput.value = '$0.00';
         totalAmountOutput.value = '$0.00';
+    }
+    if(billInput.value == '' && customButtonInput.value == '' && peopleNumberInput.value == ''){
+        resetButton.style.backgroundColor = '#0D686D'
+    }
+    if(resetButton.style.backgroundColor = '#26C2AE'){
+        resetButton.style.backgroundColor = '#9FE8DF'
     }
     for(let j=0; j<percentClick.length; j++){
         percentClick[j].style.background = '#00474B'

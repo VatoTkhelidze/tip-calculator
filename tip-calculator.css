@@ -332,9 +332,6 @@ header{
     line-height: 30px;
 }
 
-.reset-box:hover {
-    background-color: #9FE8DF;
-}
 
 
 input::-webkit-outer-spin-button,
