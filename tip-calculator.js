@@ -12,7 +12,7 @@ let d = 0;
 let calculation;
 let calculationTotal;
 resetColorChange = () => {
-    resetButton.style.backgroundColor = '#26C2AE';
+    resetButton.style.backgroundColor = '#0D686D';
 }
 for(let i=0; i<percentClick.length; i++){
     percentClick[i].addEventListener('click', function(){
@@ -193,6 +193,9 @@ customButtonInput.addEventListener('input', function result(){
     calculationTotal = calculation + c / d
     tipAmountOutput.value = '$' + calculation.toFixed(2)
     totalAmountOutput.value = '$' + calculationTotal.toFixed(2)
+    if(customButtonInput.value < 0){
+        customButtonInput.value = ''
+    }
     if(customButtonInput.value === '0'){
         customButton.style.border = '2px solid #E17052'
     }
@@ -244,7 +247,6 @@ customButtonInput.addEventListener('click', function(){
     tipAmountOutput.value = '$' + calculation.toFixed(2)
     tipAmountOutput.value = '$0.00';
     totalAmountOutput.value = '$0.00';
-
     if(customButtonInput.value > 0){
         resetButton.style.backgroundColor = '#26C2AE';
         customButton.style.border = 'none'
@@ -268,7 +270,7 @@ resetButton.addEventListener('click', function(){
     peopleNumberInput.style.border = 'none';
     cantBeZero.style.display = 'none';
     customButton.style.border = 'none';
-    resetColorChange();
+    billInput.style.border = 'none';
     if(billInput.value > 0 || peopleNumberInput.value > 0 || customButtonInput.value > 0 || tipAmountOutput.value > 0 || totalAmountOutput.value > 0){
         billInput.value = '';
         peopleNumberInput.value = '';
@@ -300,8 +302,19 @@ billInput.addEventListener('input', function(){
         tipAmountOutput.value = '$' + calculation.toFixed(2)
         totalAmountOutput.value = '$' + calculationTotal.toFixed(2)
     }
+    if(billInput.value < 0){
+        billInput.value = ''
+    }
     if(billInput.value > 0 && peopleNumberInput.value > 0){
         totalAmountOutput.value = '$0.00'
+    }
+    if(billInput.value > 100000){
+        tipAmountOutput.value = 'Are you sure ?'
+        totalAmountOutput.value = ''
+        billInput.style.border = '2px solid #E17052'
+    }
+    if(billInput.value < 100000){
+        billInput.style.border = 'none'
     }
     if(!billInput.value && peopleNumberInput.value){
         tipAmountOutput.value = '$0.00'
@@ -329,9 +342,20 @@ peopleNumberInput.addEventListener('input', function(){
         tipAmountOutput.value = '$' + calculation.toFixed(2)
         totalAmountOutput.value = '$' + calculationTotal.toFixed(2)
     }
+    if(peopleNumberInput.value < 0){
+        peopleNumberInput.value = ''
+    }
     if(!billInput.value && peopleNumberInput.value){
         tipAmountOutput.value = '$0.00'
         totalAmountOutput.value = '$0.00'
+    }
+    if(billInput.value > 100000){
+        tipAmountOutput.value = 'Are you sure ?'
+        totalAmountOutput.value = ''
+        billInput.style.border = '2px solid #E17052'
+    }
+    if(billInput.value < 100000){
+        billInput.style.border = 'none'
     }
     if(billInput.value && !peopleNumberInput.value){
         tipAmountOutput.value = '$0.00'
