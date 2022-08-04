@@ -356,6 +356,8 @@ peopleNumberInput.addEventListener('input', function(){
     }
     if(billInput.value < 100000){
         billInput.style.border = 'none'
+        tipAmountOutput.value = '$' + calculation.toFixed(2)
+        totalAmountOutput.value = '$' + calculationTotal.toFixed(2)
     }
     if(billInput.value && !peopleNumberInput.value){
         tipAmountOutput.value = '$0.00'
@@ -378,3 +380,4 @@ peopleNumberInput.addEventListener('input', function(){
         cantBeZero.style.display = 'none'
     }
 })
+
