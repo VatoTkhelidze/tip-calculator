@@ -350,9 +350,15 @@ input::-webkit-inner-spin-button {
 }
 
 .percent-box-one,
-.percent-box-two,
-.percent-box-media{
+.percent-box-two{
     display: none;
+}
+
+
+.percent-box-media{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
 
@@ -411,15 +417,7 @@ input::-webkit-inner-spin-button {
     
     .percent-box-media{
         display: flex;
-        flex-direction: column;
         margin-top: 16px;
-    }
-
-    .box-5,
-    .box-10,
-    .box-25,
-    .box-50{
-        margin-right: 14px;
     }
 
     .number-of-people,

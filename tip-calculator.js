@@ -17,7 +17,7 @@ resetColorChange = () => {
 for(let i=0; i<percentClick.length; i++){
     percentClick[i].addEventListener('click', function(){
         for(let j=0; j<percentClick.length; j++){
-            percentClick[j].style.background = '#00474B'
+            percentClick[j].style.background = '#00474B';
         }
         percentClick[i].style.background = '#26C2AE';
     })
@@ -36,87 +36,87 @@ percent5.addEventListener('click', function result(){
     b = 100;
     c = billInput.value;
     d = peopleNumberInput.value;
-    calculation = c * a / b / d
+    calculation = c * a / b / d;
     calculationTotal = calculation + c / d;
-    tipAmountOutput.value = '$' + calculation.toFixed(2)
-    totalAmountOutput.value = '$' + calculationTotal.toFixed(2)
-    customButtonInput.value = ''
+    tipAmountOutput.value = '$' + calculation.toFixed(2);
+    totalAmountOutput.value = '$' + calculationTotal.toFixed(2);
+    customButtonInput.value = '';
     if(!peopleNumberInput.value && !billInput.value){
-        tipAmountOutput.value = '$0.00'
-        totalAmountOutput.value = '$0.00'
+        tipAmountOutput.value = '$0.00';
+        totalAmountOutput.value = '$0.00';
     }
     if(peopleNumberInput.value && !billInput.value){
-        tipAmountOutput.value = '$0.00'
-        totalAmountOutput.value ='$0.00'
+        tipAmountOutput.value = '$0.00';
+        totalAmountOutput.value ='$0.00';
     }
     if(!peopleNumberInput.value && billInput.value){
-        tipAmountOutput.value = '$0.00'
-        totalAmountOutput.value = '$0.00'
+        tipAmountOutput.value = '$0.00';
+        totalAmountOutput.value = '$0.00';
     }
     if(peopleNumberInput.value && billInput.value < 0){
-        tipAmountOutput.value = '$0.00'
-        totalAmountOutput.value = '$0.00'
+        tipAmountOutput.value = '$0.00';
+        totalAmountOutput.value = '$0.00';
     }
     if(peopleNumberInput.value && billInput.value > 0){
-        totalAmountOutput.value = '$' + calculationTotal.toFixed(2)
+        totalAmountOutput.value = '$' + calculationTotal.toFixed(2);
     }
 })
-let percent10 = document.querySelector('.box-10')
+let percent10 = document.querySelector('.box-10');
 percent10.addEventListener('click', function result(){
     a = 10;
     b = 100;
     c = billInput.value;
     d = peopleNumberInput.value;
-    calculation = c * a / b / d
-    calculationTotal = calculation + c / d
-    tipAmountOutput.value = '$' + calculation.toFixed(2)
-    totalAmountOutput.value = '$' + calculationTotal.toFixed(2)
-    customButtonInput.value = ''
+    calculation = c * a / b / d;
+    calculationTotal = calculation + c / d;
+    tipAmountOutput.value = '$' + calculation.toFixed(2);
+    totalAmountOutput.value = '$' + calculationTotal.toFixed(2);
+    customButtonInput.value = '';
     if(!peopleNumberInput.value && billInput.value > 0){
-        totalAmountOutput.value = '$0.00'
+        totalAmountOutput.value = '$0.00';
     }
     if(!peopleNumberInput.value && !billInput.value){
-        tipAmountOutput.value = '$0.00'
+        tipAmountOutput.value = '$0.00';
     }
     if(peopleNumberInput.value && !billInput.value){
-        tipAmountOutput.value = '$0.00'
-        totalAmountOutput.value = '$0.00'
+        tipAmountOutput.value = '$0.00';
+        totalAmountOutput.value = '$0.00';
     }
     if(!peopleNumberInput.value && billInput.value > 0){
-        tipAmountOutput.value = '$0.00'
-        totalAmountOutput.value = '$0.00'
+        tipAmountOutput.value = '$0.00';
+        totalAmountOutput.value = '$0.00';
     }
     if(peopleNumberInput.value && billInput.value < 0){
-        tipAmountOutput.value = '$0.00'
-        totalAmountOutput.value = '$0.00'
+        tipAmountOutput.value = '$0.00';
+        totalAmountOutput.value = '$0.00';
     }
 })
-let percent15 = document.querySelector('.box-15')
+let percent15 = document.querySelector('.box-15');
 percent15.addEventListener('click', function result(){
     a = 15;
     b = 100;
     c = billInput.value;
     d = peopleNumberInput.value;
-    calculation = c * a / b / d
-    calculationTotal = calculation + c / d
-    tipAmountOutput.value = '$' + calculation.toFixed(2)
-    totalAmountOutput.value = '$' + calculationTotal.toFixed(2)
-    customButtonInput.value = ''
+    calculation = c * a / b / d;
+    calculationTotal = calculation + c / d;
+    tipAmountOutput.value = '$' + calculation.toFixed(2);
+    totalAmountOutput.value = '$' + calculationTotal.toFixed(2);
+    customButtonInput.value = '';
     if(!peopleNumberInput.value && !billInput.value){
-        tipAmountOutput.value = '$0.00'
-        totalAmountOutput.value = '$0.00'
+        tipAmountOutput.value = '$0.00';
+        totalAmountOutput.value = '$0.00';
     }
     if(peopleNumberInput.value && !billInput.value){
-        tipAmountOutput.value = '$0.00'
-        totalAmountOutput.value = '$0.00'
+        tipAmountOutput.value = '$0.00';
+        totalAmountOutput.value = '$0.00';
     }
     if(!peopleNumberInput.value && billInput.value){
-        tipAmountOutput.value = '$0.00'
-        totalAmountOutput.value = '$0.00'
+        tipAmountOutput.value = '$0.00';
+        totalAmountOutput.value = '$0.00';
     }
     if(peopleNumberInput.value && billInput.value < 0){
-        tipAmountOutput.value = '$0.00'
-        totalAmountOutput.value = '$0.00'
+        tipAmountOutput.value = '$0.00';
+        totalAmountOutput.value = '$0.00';
     }
     if(peopleNumberInput.value && billInput.value > 0){
     }
